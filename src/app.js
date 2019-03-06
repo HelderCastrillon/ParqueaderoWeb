@@ -1,20 +1,43 @@
+//React Library
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Button from '@material-ui/core/Button';
-import Avatar from '@material-ui/core/Avatar';
-import Chip from '@material-ui/core/Chip';
+//Materials Components
+import { MuiThemeProvider } from '@material-ui/core/styles';
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+//My Components
+import Registro from './components/Registro';
+import theme from './theme'
+
 function App() {
+  //title variable
+  const title = <h1>Sistema de Parquadero</h1>;
   return (
     <div>
-        <Chip
-        avatar={<Avatar>MB</Avatar>}
-        label="Clickable Chip"
-      />
-         <Button variant="contained" color="primary">
-      Hello World
-    </Button>
+      <MuiThemeProvider theme={theme}>
+        <Grid container>
+          <Grid item xs={3} sm={3}>
+          </Grid>
+          <Grid item xs={6} sm={6}>
+            <div style={theme.title}>{title}</div>
+          </Grid>
+          <Grid item xs={3} sm={3}>
+          </Grid>
+        </Grid>
+        <Grid container spacing={24}>
+          <Grid item xs={3} sm={3}>
+          </Grid>
+          <Grid item xs={6} sm={6}>
+            <Paper >
+              <Registro />
+              <br/>
+            </Paper>
+          </Grid>
+          <Grid item xs={3} sm={3}>
+          </Grid>
+        </Grid>
+      </MuiThemeProvider>
     </div>
- 
   );
 }
 
