@@ -15,10 +15,6 @@ module.exports = {
           test: /\.(js|jsx)$/,
           exclude: '/node_modules/',
           use: 'babel-loader' // traspilador babel
-        },
-        {
-          test: /\.json$/,
-          use: 'json-loader' // para que soporte archivos json
         },  
         {
               test: /\.css$/,

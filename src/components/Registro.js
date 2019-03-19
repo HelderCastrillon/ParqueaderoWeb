@@ -8,6 +8,7 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
 import theme from '../theme';
+import vehiculos from '../data/vehiculos.json';
 /**
  * This class shows the interface to capture
  * information necesary to park system

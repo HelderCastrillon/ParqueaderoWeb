@@ -1,0 +1,19 @@
+{
+    "vehiculos":[
+        {
+            "propietario":"Lenny",
+            "tipo":"Carro",
+            "placa":"ABC123"
+        },
+        {
+            "propietario":"Tatiana",
+            "tipo":"Carro",
+            "placa":"XYZ345"
+        },
+        {
+            "propietario":"Helder",
+            "tipo":"Moto",
+            "placa":"FFF111"
+        }
+    ]
+}
