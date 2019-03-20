@@ -19,7 +19,7 @@ class Registro extends React.Component {
     listItem(){
         return tiposVehiculos.tipos.map(function(item){
             return(
-                <MenuItem value={item.tipo}>{item.tipo}</MenuItem>
+                <MenuItem key={item.id} value={item.tipo}>{item.tipo}</MenuItem>
             )
         });
     }
@@ -27,7 +27,8 @@ class Registro extends React.Component {
         //console.log(tiposVehiculos.tipos);
 
         return (
-            <div>
+            <div style={this.props.style}>
+                <div>{this.props.subtitle}</div>
                 <Grid container>
                     <Grid item xs={6}>
                         <TextField

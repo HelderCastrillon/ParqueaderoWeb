@@ -12,6 +12,7 @@ import theme from './theme'
 function App() {
   //title variable
   const title = <h1>Sistema de Parquadero</h1>;
+  console.log(theme);
   return (
     <div>
       <MuiThemeProvider theme={theme}>
@@ -29,7 +30,7 @@ function App() {
           </Grid>
           <Grid item xs={6} sm={6}>
             <Paper >
-              <Registro />
+              <Registro style={theme.content} subtitle={"Estimado usuario por favor diligencie todos los campos del formulario"} />
               <br/>
             </Paper>
           </Grid>

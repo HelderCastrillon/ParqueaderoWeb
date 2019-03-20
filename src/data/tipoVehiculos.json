@@ -1,16 +1,20 @@
 {
     "tipos": [
         {
-            "tipo": "moto"
+            "tipo": "moto",
+            "id":1
         },
         {
-            "tipo": "carro"
+            "tipo": "carro",
+            "id":2
         },
         {
-            "tipo":"bus"
+            "tipo":"bus",
+            "id":3
         },
         {
-            "tipo":"burro"
+            "tipo":"bicicleta",
+            "id":4
         }
     ]
 }
