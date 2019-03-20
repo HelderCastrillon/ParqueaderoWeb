@@ -12,7 +12,6 @@ import theme from './theme'
 function App() {
   //title variable
   const title = <h1>Sistema de Parquadero</h1>;
-  console.log(theme);
   return (
     <div>
       <MuiThemeProvider theme={theme}>

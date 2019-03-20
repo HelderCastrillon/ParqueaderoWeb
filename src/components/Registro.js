@@ -16,6 +16,10 @@ import vehiculos from '../data/vehiculos.json';
  * information necesary to park system
  */
 class Registro extends React.Component {
+     constructor(props){
+        super(props);
+        this.state={vehiculoSeleccionado:""};
+    }
     listItem(){
         return tiposVehiculos.tipos.map(function(item){
             return(
@@ -23,10 +27,15 @@ class Registro extends React.Component {
             )
         });
     }
+    //handles
+    handleSelected(event){
+        //console.log(event.target.value);
+        this.setState({vehiculoSeleccionado:event.target.value});
+    }
+    
+    //
     render() {
-        //console.log(tiposVehiculos.tipos);
-
-        return (
+           return (
             <div style={this.props.style}>
                 <div>{this.props.subtitle}</div>
                 <Grid container>
@@ -51,7 +60,10 @@ class Registro extends React.Component {
                     <Grid item xs={6}>
                         <FormControl>
                             <InputLabel>Tipo de Vehículo</InputLabel>
-                            <Select>
+                            <Select
+                            value={this.state.vehiculoSeleccionado}
+                            onChange={this.handleSelected.bind(this)}
+                            >
                                    {
                                        this.listItem()
                                    }
