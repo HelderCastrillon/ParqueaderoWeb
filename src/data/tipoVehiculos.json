@@ -1,0 +1,16 @@
+{
+    "tipos": [
+        {
+            "tipo": "moto"
+        },
+        {
+            "tipo": "carro"
+        },
+        {
+            "tipo":"bus"
+        },
+        {
+            "tipo":"burro"
+        }
+    ]
+}

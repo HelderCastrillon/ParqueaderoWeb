@@ -8,13 +8,24 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import Button from '@material-ui/core/Button';
 import theme from '../theme';
+//Datos
+import tiposVehiculos from '../data/tipoVehiculos'
 import vehiculos from '../data/vehiculos.json';
 /**
  * This class shows the interface to capture
  * information necesary to park system
  */
 class Registro extends React.Component {
+    listItem(){
+        return tiposVehiculos.tipos.map(function(item){
+            return(
+                <MenuItem value={item.tipo}>{item.tipo}</MenuItem>
+            )
+        });
+    }
     render() {
+        //console.log(tiposVehiculos.tipos);
+
         return (
             <div>
                 <Grid container>
@@ -40,12 +51,10 @@ class Registro extends React.Component {
                         <FormControl>
                             <InputLabel>Tipo de Vehículo</InputLabel>
                             <Select>
-                                <MenuItem value="">
-                                    <em>Carro</em>
-                                </MenuItem>
-                                <MenuItem value={10}>Moto</MenuItem>
-                                <MenuItem value={20}>Bicicleta</MenuItem>
-                                <MenuItem value={30}>Otros</MenuItem>
+                                   {
+                                       this.listItem()
+                                   }
+
                             </Select>
                         </FormControl>
                     </Grid>
